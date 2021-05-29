@@ -1,0 +1,209 @@
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: black;
+      font-family: Helvetica, sans-serif;
+      font-weight: 100;
+      color: white;
+      padding-top: 10px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column.center {
+      justify-content: center;
+    }
+
+    .column.left-align {
+      align-items: flex-end;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row.center {
+      align-items: center;
+      padding-top: 10px;
+    }
+
+    .row.space-between {
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+
+    .full-width {
+      width: 100%
+    }
+
+    div.container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 18px;
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+
+    div.watermark {
+      align-items: center;
+    }
+
+    p.watermark {
+      font-family: Helvetica, sans-serif;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    p.watermark.small {
+      font-size: 24px;
+      margin-left: 12px;
+    }
+
+    a.page-link.inactive {
+      color: grey;
+    }
+
+    div.page-header {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    h2.page-header__initials {
+      font-family: Helvetica, sans-serif;
+      font-size: 56px;
+      font-weight: 300;
+      margin: 0;
+      margin-right: 12px;
+    }
+
+    h3.page-header__copy {
+      font-size: 28px;
+      font-weight: 100;
+      margin: 0;
+    }
+
+    .grey {
+      color: grey;
+    }
+
+    div.image__container {
+      width: 100%;
+    }
+
+    .image__container.card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 550px;
+      max-width: 440px;
+    }
+
+    img.image {
+      width: 100%;
+      height: auto;
+    }
+
+    .image.card {
+      position: absolute;
+      inline-size: fit-content;
+    }
+
+    h2.section_header {
+      font-size: 80px;
+      font-weight: 200;
+      line-height: 1;
+      margin: 0;
+    }
+
+    p.section_copy {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    div.section__bio {
+      width: fit-content;
+      margin-left: auto;
+    }
+
+    .rotate {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+    }
+
+    .dashed-line {
+      border-bottom: 1px dashed white;
+      width: 95%;
+    }
+
+    div.spacer-y {
+      margin-top: 40px;
+    }
+
+    div.spacer-x {
+      margin-right: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-nav row space-between">
+      <div class="watermark row">
+        <p class="watermark">a.g.</p>
+        <p class="watermark small grey">ui|ux</p>
+      </div>
+      <div class="row">
+        <li id="workbookButton">workbook</li>
+        <div class="spacer-x"></div>
+        <div class="spacer-x"></div>
+        <li id="aboutmeButton" class="page-link" href="index.html">about me</li>
+      </div>
+    </div>
+
+    <div class="spacer-y"></div>
+
+    <div class="row full-width">
+      <h2 class="section_header left-shift rotate">workbook</h2>
+      <div class="spacer-x"></div>
+      <div class="row full-width space-between">
+        <div class="image__container card">
+          <img class="image card" alt="inspiring-design"
+            src="images/Spotty.png">
+        </div>
+        <div class="image__container card">
+          <img class="image card" alt="elaborate-wireframe"
+            src="images/Homi.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-y"></div>
+    <div class="spacer-y"></div>
+  </div>
+  <li id="aboutmeButton" ></li>
+
+  <script type="text/javascript">
+      document.getElementById("aboutmeButton").onclick = function () {
+          location.href = "index.html";
+      };
+  </script>
+
+
+</body>
+
+</html>
